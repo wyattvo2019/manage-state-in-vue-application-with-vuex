@@ -1,17 +1,20 @@
 <template>
   <div class="wrapper">
-    <p>{{ $store.getters.fullName }}</p>
+    <p>{{ $store.getters['user/fullName'] }}</p>
     <div v-for="airport in airports" :key="airport.abbreviation">
       <airport-card 
         :airport="airport"
         @click="$store.dispatch('addToFavorites', airport)"
       />
     </div>
-    <h2 v-if="$store.state.favorites.length">Favorites</h2>
+    <h2 v-if="$store.state.airports.favorites.length">Favorites</h2>
     <div 
-      v-for="airport in $store.state.favorites" 
+      v-for="(airport, index) in $store.state.airports.favorites" 
       :key="airport.abbreviation">
-      <airport-card :airport="airport"  />
+      <airport-card 
+        :airport="airport"
+        @click="$store.dispatch('removeFromFavorites', index)"
+      />
     </div>
   </div>
 </template>

@@ -1,26 +1,9 @@
 import { createStore } from 'vuex'
-
+import UserModule from './user.module.js'
+import AirportsModule from './airports.module.js'
 export default createStore({
-  state: {
-    firstName: 'John',
-    lastName: 'Doe',
-    favorites: []
-  },
-mutations: {
-  UPDATE_FAVORITES(state, payload) {
-    state.favorites = payload
+  modules: {
+    user: UserModule,
+    airports: AirportsModule
   }
-},
-actions: {
-  addToFavorites(context, payload) {
-    const favorites = context.state.favorites
-    favorites.push(payload)
-    context.commit('UPDATE_FAVORITES', favorites)
-  },
-},
-getters: {
-  fullName: function (state) {
-    return `${state.firstName} ${state.lastName}`
-  }
-}
 })
