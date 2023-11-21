@@ -23,3 +23,18 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 # manage-state-in-vue-application-with-vuex
+
+* execute an action that in turn calls a mutation
+* have multiple mutations inside of an action
+* mutations have one job and one job only: update the store
+* Actions can do a number of different things including combining data, fetching data, and running JavaScript logic
+* A getter is a way to combine multiple state values into a single value
+```sh
+npm install vuex@next --save
+```
+* can think of Vuex getters as computed properties for your Vuex store.
+* An action accepts two arguments: the context and the payload
+* From action call to mutation by commit method
+* From component call to action by dispatch method
+
+
