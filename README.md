@@ -33,3 +33,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm install vuex@next --save
 ```
 * can think of Vuex getters as computed properties for your Vuex store.
+* An action accepts two arguments: the context and the payload
+* From action call to mutation by commit method
+* From component call to action by dispatch method
+
+
