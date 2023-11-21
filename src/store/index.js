@@ -12,6 +12,8 @@ actions: {
 
 },
 getters: {
-
+  fullName: function (state) {
+    return `${state.firstName} ${state.lastName}`
+  }
 }
 })

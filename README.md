@@ -32,3 +32,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```sh
 npm install vuex@next --save
 ```
+* can think of Vuex getters as computed properties for your Vuex store.
